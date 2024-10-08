@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: project_blog
+
+server:
+  port: 33010

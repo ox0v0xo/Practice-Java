@@ -3,6 +3,10 @@ package com.iw.project_blog.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -22,12 +26,15 @@ public class User implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
+    @NotBlank(message = "用户名不能为空")
     private String username;
 
     private String avatar;
 
+    @Email(message = "邮箱格式不正确")
     private String email;
 
+    @NotBlank(message = "密码不能为空")
     private String password;
 
     private Integer status;
@@ -103,14 +110,14 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-            "id = " + id +
-            ", username = " + username +
-            ", avatar = " + avatar +
-            ", email = " + email +
-            ", password = " + password +
-            ", status = " + status +
-            ", created = " + created +
-            ", lastLogin = " + lastLogin +
-        "}";
+                "id = " + id +
+                ", username = " + username +
+                ", avatar = " + avatar +
+                ", email = " + email +
+                ", password = " + password +
+                ", status = " + status +
+                ", created = " + created +
+                ", lastLogin = " + lastLogin +
+                "}";
     }
 }

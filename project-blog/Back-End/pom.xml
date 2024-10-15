@@ -7,13 +7,13 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.4</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath />
+		<!--  lookup parent from repository  -->
 	</parent>
 	<groupId>com.iw</groupId>
-	<artifactId>project_blog</artifactId>
+	<artifactId>project-blog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>project_blog</name>
-	<description>Demo project for Spring Boot</description>
+	<name>project-blog</name>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
